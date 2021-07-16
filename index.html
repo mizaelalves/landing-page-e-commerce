@@ -6,44 +6,79 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
   <title>E-commerce</title>
 </head>
 
 <body>
   <div class="nav"></div>
-    <nav>
-      <a id="loja" href="#home">Loja</a>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Sobre</a>
-        </li>
-      </ul>
-    </nav>
+  <nav>
+    <a id="loja" href="#home">Loja</a>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Sobre</a>
+      </li>
+    </ul>
+  </nav>
   </div>
   <div class="main">
     <div class="presentation">
-    <div class="frase">
-      <p>Moda</p>
-    <p id="estilo">Estilo</p>
-    </div>
+      <div class="frase">
+        <p>Moda</p>
+        <p id="estilo">Estilo</p>
+      </div>
     </div>
     <form class="form">
       <label for="fname" style="color: rgb(232, 230, 187);">Receba nossas promoções!</label><br>
       <label for="fname">Nome:</label><br>
-      <input type="text" id="fname" name="fname" placeholder="Nome" ><br>
+      <input type="text" id="fname" name="fname" placeholder="Nome" required><br>
       <label for="fname">Sobrenome:</label><br>
-      <input type="text" id="lname" name="fname" placeholder="Sobrenome" ><br>
+      <input type="text" id="lname" name="fname" placeholder="Sobrenome" required><br>
       <label for="fname">Email:</label><br>
-      <input type="text" id="email" name="femail" placeholder="E-mail" >
-      <input type="submit" id="submit" name="sub">
+      <input type="text" id="email" name="femail" placeholder="E-mail" required>
+      <button type="submit" onclick="cadastraUsuario()" id="submit" name="enviar">Enviar</button>
     </form>
   </div>
-  <div class="footer">
-
+  <div class="content">
+    <div class="card-products">
+      <div class="card-product">
+        <img src="./assets/camisa-mulher.webp" alt="camisa">
+        <h4>Camisa</h4>
+        <p>Camisa feminina branca</p><br>
+        <p style="font-size: 13px;">De: R$100</p><p>Por: R$50</p>
+      </div>
+      <div class="card-product">
+        <img src="./assets/blusa-mulher.webp" alt="blusa">
+        <h4>Blusa</h4>
+        <p>blusa feminina preta</p><br>
+        <p style="font-size: 13px;">De: R$100</p><p>Por: R$50</p>
+      </div>
+      <div class="card-product">
+        <img src="./assets/calça-mulher.webp" alt="calça">
+        <h4>Calça</h4>
+        <p>calça feminina preta</p><br>
+        <p style="font-size: 13px;">De: R$100</p><p>Por: R$50</p>
+      </div>
+    </div>
   </div>
+  <div class="footer">
+    <div class="social">
+      <a href="https://www.facebook.com" target="_blank"><img src="./assets/facebook.svg" alt="Facebook" width="15%">facebook </a>
+      <a href="https://www.twitter.com" target="_blank"><img src="./assets/twitter.svg" alt="Twitter" width="15%"> twitter</a>
+      <a href="https://www.whatsapp.com" target="_blank"><img src="./assets/whatsapp.svg" alt="whatsapp"  width="15%"> +550912342349</a>
+      <a href="https://www.instagram.com" target="_blank"><img src="./assets/instagram.svg" alt="whatsapp" width="15%"> @instagram</a>
+    </div>
+    <div class="endereco"><br>
+      <h5>Endereço:</h5>
+      <p>rua tal nº10 - Centro</p>
+      <p>Brasil Novo - PA</p>
+      <p>Brasil</p>
+    </div>
+  </div>
+  <p id="info">2021 Corpyright - <a href="https://github.com/mizaelalves" style="text-decoration: none; color: #7d7653;">Mizael Alves</a></p>
 </body>
 
 </html>

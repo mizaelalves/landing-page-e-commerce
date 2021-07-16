@@ -18,6 +18,7 @@ html {
 
 body {
   color: white;
+  background-color: #cbba66;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -39,42 +40,17 @@ nav {
   }
 }
 
-a {
-  position: relative;
-  text-decoration: none;
-  color: white;
-}
-
-a::before {
-  content: "";
-  position: absolute;
-  height: 3px;
-  right: 0px;
-  bottom: -3px;
-  left: 0px;
-  background-color: #7d7653;
-  transition: 1s;
-}
-
-a:hover {
-  transition: 1s;
-}
-a:hover::before {
-  background: linear-gradient(to right, #171717, #7d7653);
-  transition: 1s;
-}
-
 nav {
   font-family: myNav;
   display: flex;
+  position: absolute;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: #988d57;
+  background-color: rgba(152, 141, 87, 0);
   font-size: 20px;
-  padding: 0 10px;
-}
-nav #loja {
-  margin-left: 40px;
+  padding: 0 11rem;
+  transition: background-color 0.5s ease-in;
 }
 @media (min-width: 300px) {
   nav {
@@ -92,13 +68,34 @@ nav ul li {
 nav ul li:last-child {
   margin-right: 0px;
 }
-
-.main {
-  display: flex;
-  justify-content: space-between;
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #e8e6bb;
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0px;
+  bottom: -3px;
+  left: 0px;
+  background-color: #7d7653;
+  transition: 1s;
+}
+nav a:hover {
+  transition: 1s;
+}
+nav a:hover::before {
+  background: linear-gradient(to right, #171717, #7d7653);
+  transition: 1s;
 }
 
 .main {
+  display: flex;
+  flex-wrap: wrap;
+  position: static;
+  justify-content: space-between;
   background-image: url("./assets/1.png");
   background-repeat: no-repeat;
   width: 100%;
@@ -108,18 +105,25 @@ nav ul li:last-child {
 }
 
 .form {
-  border-radius: 5px;
-  margin: 4rem 4rem;
+  border-radius: 10px;
+  margin: 6rem 4rem 4rem 4rem;
+  margin-right: 11rem;
   padding: 2rem 3rem;
-  box-shadow: 2px 2px 30px 1px #434343;
+  box-shadow: 2px 2px 30px 1px #7d7653;
   background-color: #7d7653;
   color: #cbba66;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
 }
-@media (min-width: 300px) {
+@media (max-width: 1000px) {
   .form {
-    margin: 40px 5px auto 1px;
+    margin: 7rem auto 6rem auto;
     padding: 1rem 2rem;
   }
+}
+
+.form:hover {
+  transform: scale(1.1);
 }
 
 input,
@@ -151,7 +155,7 @@ input[type=text]:focus {
   border: 2px solid #b5ab3e;
 }
 
-input[type=submit] {
+button {
   width: 100%;
   background-color: #cbba66;
   color: white;
@@ -163,7 +167,7 @@ input[type=submit] {
   transition: 0.5s;
 }
 
-input[type=submit]:hover {
+button:focus {
   background-color: #a79a55;
 }
 
@@ -173,13 +177,14 @@ input[type=submit]:hover {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  margin-left: 11rem;
 }
 
 .frase {
   color: #171717;
   font-size: 100px;
   font-family: myFont;
-  margin-top: 119px;
+  margin-top: 13rem;
 }
 .frase #estilo {
   font-family: italic;
@@ -190,10 +195,102 @@ input[type=submit]:hover {
   }
 }
 
-.footer {
+.frase p {
+  margin: 2rem auto;
+}
+
+.content {
   width: 100%;
   min-height: 50vh;
   background-color: #988d57;
+}
+
+.card-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 10px 10px 2px #988d57;
+}
+
+.card-product {
+  background-color: #ffffff;
+  width: 17rem;
+  height: 27rem;
+  margin: 2rem;
+  border-radius: 10px;
+  color: #171717;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+.card-product h4 {
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.card-product p {
+  padding-left: 10px;
+  margin: 0;
+  padding-top: 0;
+}
+.card-product img {
+  border-radius: 10px;
+  margin: 8px 8px 8px 8px;
+  width: 16rem;
+  height: 18rem;
+}
+
+.card-product:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.footer a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  color: #7d7653;
+  font-size: 15px;
+}
+.footer img {
+  margin: 8px;
+  width: 2rem;
+}
+
+.social {
+  margin-left: 11rem;
+}
+
+.endereco {
+  color: #7d7653;
+  margin: 0 14rem auto auto;
+}
+.endereco p {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.endereco h5 {
+  font-size: 18px;
+  margin: 0;
+  margin-top: 0;
+}
+
+#info {
+  color: #7d7653;
+  position: relative;
+  margin-top: 14.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
