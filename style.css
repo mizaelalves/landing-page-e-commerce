@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@font-face {
+  font-family: myFont;
+  src: url(./assets/fonts/RoxboroughCF-DemiBold.otf);
+}
+@font-face {
+  font-family: myNav;
+  src: url(./assets/fonts/Maharlika-Regular.ttf);
+}
+@font-face {
+  font-family: italic;
+  src: url(./assets/fonts/RoxboroughCF-BoldItalic.otf);
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+nav {
+  padding: 10px;
+}
+@media (min-width: 600px) {
+  nav {
+    padding: 20px;
+  }
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0px;
+  bottom: -3px;
+  left: 0px;
+  background-color: #7d7653;
+  transition: 1s;
+}
+
+a:hover {
+  transition: 1s;
+}
+a:hover::before {
+  background: linear-gradient(to right, #171717, #7d7653);
+  transition: 1s;
+}
+
+nav {
+  font-family: myNav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #988d57;
+  font-size: 20px;
+  padding: 0 10px;
+}
+nav #loja {
+  margin-left: 40px;
+}
+@media (min-width: 300px) {
+  nav {
+    justify-content: space-between;
+  }
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+nav ul li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+nav ul li:last-child {
+  margin-right: 0px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  background-image: url("./assets/1.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 89vh;
+}
+
+.form {
+  border-radius: 5px;
+  margin: 4rem 4rem;
+  padding: 2rem 3rem;
+  box-shadow: 2px 2px 30px 1px #434343;
+  background-color: #7d7653;
+  color: #cbba66;
+}
+@media (min-width: 300px) {
+  .form {
+    margin: 40px 5px auto 1px;
+    padding: 1rem 2rem;
+  }
+}
+
+input,
+label {
+  margin-bottom: 30px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid rgba(204, 204, 204, 0);
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (min-width: 300px) {
+  input[type=text] {
+    padding: 10px;
+    margin: 9px 0;
+    margin-left: 0;
+  }
+}
+
+input[type=text]:focus {
+  border: 2px solid #b5ab3e;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #cbba66;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input[type=submit]:hover {
+  background-color: #a79a55;
+}
+
+.presentation {
+  color: #3EB595;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.frase {
+  color: #171717;
+  font-size: 100px;
+  font-family: myFont;
+  margin-top: 119px;
+}
+.frase #estilo {
+  font-family: italic;
+}
+@media (min-width: 300px) {
+  .frase {
+    font-size: 70px;
+  }
+}
+
+.footer {
+  width: 100%;
+  min-height: 50vh;
+  background-color: #988d57;
+}
+
+/*# sourceMappingURL=style.css.map */
