@@ -18,7 +18,7 @@ html {
 
 body {
   color: white;
-  background-color: #cbba66;
+  background-color: #988d57;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -54,6 +54,7 @@ nav {
 }
 @media (min-width: 300px) {
   nav {
+    padding: 0 5rem;
     justify-content: space-between;
   }
 }
@@ -219,6 +220,7 @@ button:focus {
   margin: 2rem;
   border-radius: 10px;
   color: #171717;
+  box-shadow: 5px 10px 30px 1px #cbba66;
   transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
 }
@@ -249,14 +251,21 @@ button:focus {
   position: absolute;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: nowrap;
   padding: 2rem;
+  padding-left: 11rem;
+}
+@media (max-width: 1000px) {
+  .footer {
+    padding-left: 2rem;
+  }
 }
 .footer a {
   display: flex;
   align-items: center;
   position: relative;
   text-decoration: none;
-  color: #7d7653;
+  color: #ffff;
   font-size: 15px;
 }
 .footer img {
@@ -264,13 +273,9 @@ button:focus {
   width: 2rem;
 }
 
-.social {
-  margin-left: 11rem;
-}
-
 .endereco {
-  color: #7d7653;
-  margin: 0 14rem auto auto;
+  color: #ffffff;
+  margin: 0 14rem 0 3rem;
 }
 .endereco p {
   font-size: 16px;
@@ -284,13 +289,13 @@ button:focus {
 }
 
 #info {
-  color: #7d7653;
+  color: whitesmoke;
   position: relative;
   margin-top: 14.5rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
