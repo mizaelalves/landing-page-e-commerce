@@ -124,7 +124,6 @@ nav {
   margin: 6rem 4rem 4rem 4rem;
   margin-right: 11rem;
   padding: 2rem 3rem;
-  box-shadow: 2px 2px 30px 1px #7d7653;
   background-color: #7d7653;
   color: #cbba66;
   transition: all 0.3s ease 0s;
@@ -137,6 +136,7 @@ nav {
 
 .form:hover{
   transform: scale(1.1);
+  box-shadow: 2px 2px 30px 1px #171717;
 }
 
 input,
@@ -232,7 +232,6 @@ button:focus {
   margin: 2rem;
   border-radius: 10px;
   color: #171717;
-  box-shadow: 5px 10px 30px 1px #cbba66;
   transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
   h4 {
@@ -258,6 +257,7 @@ button:focus {
 }
 .card-product:hover {
   transform: scale(1.1);
+  box-shadow: 5px 10px 30px 1px #171717;
 }
 
 
@@ -270,7 +270,7 @@ button:focus {
   padding: 2rem;
   padding-left: 11rem;
   @media (max-width:1000px) {
-    padding-left: 2rem;
+    padding-left: 4rem;
   }
   a {
     display: flex;
