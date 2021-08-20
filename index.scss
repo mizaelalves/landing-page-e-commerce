@@ -22,7 +22,7 @@ html {
 
 body {
   color: white;
-  background-color: #988d57;
+  background-color: #bbb075;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
@@ -215,14 +215,13 @@ button:focus {
 .content {
   width: 100%;
   min-height: 50vh;
-  background-color: #988d57;
+  background-color: #bbb075;
 }
 
 .card-products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  box-shadow: 0 10px 10px 2px #988d57;
 }
 
 .card-product {

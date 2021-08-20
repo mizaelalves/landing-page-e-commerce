@@ -9,7 +9,11 @@ function cadastraUsuario() {
     dados = [];
   }
 
-  if (usuarioNome.value == "" || usuarioSobrenome.value == ""  || usuarioEmail.value == "") {
+  if (
+    usuarioNome.value == "" ||
+    usuarioSobrenome.value == "" ||
+    usuarioEmail.value == ""
+  ) {
     alert("Preencha o campo");
     return false;
   } else {
@@ -24,10 +28,12 @@ function cadastraUsuario() {
     localStorage.setItem("dadosUsuario", JSON.stringify(dados));
     console.log("Usuario " + auxRegistro.nome + " cadastrado");
 
-    alert("Usuario "+ auxRegistro.nome +" cadastrado");
+    alert("Usuario " + auxRegistro.nome + " cadastrado");
 
     usuarioNome.value = "";
     usuarioSobrenome.value = "";
     usuarioEmail.value = "";
   }
 }
+
+
